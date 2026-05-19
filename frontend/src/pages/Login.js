@@ -17,14 +17,21 @@ function Login() {
         
         try {
             const response = await api.post('/auth/login', { username, password });
-            localStorage.setItem('token', response.data.token);
-            localStorage.setItem('user', JSON.stringify(response.data.user));
-            navigate('/dashboard');
-        } catch (error) {
-            if (error.response) {
-                setError(error.response.data.error || 'Неверное имя пользователя или пароль');
+            
+            if (response.data.token) {
+                localStorage.setItem('token', response.data.token);
+                localStorage.setItem('user', JSON.stringify(response.data.user));
+                navigate('/dashboard');
             } else {
-                setError('Ошибка подключения к серверу');
+                setError('Ошибка сервера. Попробуйте еще раз.');
+            }
+        } catch (error) {
+            if (error.response?.data?.error) {
+                setError(error.response.data.error);
+            } else if (error.code === 'ERR_NETWORK') {
+                setError('Сервер недоступен. Попробуйте позже.');
+            } else {
+                setError('Неверное имя пользователя или пароль');
             }
         } finally {
             setLoading(false);

@@ -13,14 +13,15 @@ import './App.css';
 
 function App() {
     const isAuthenticated = () => {
-        return localStorage.getItem('token') !== null;
+        const token = localStorage.getItem('token');
+        return token !== null && token !== undefined;
     };
 
     return (
         <Router>
             <Routes>
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
+                <Route path="/login" element={!isAuthenticated() ? <Login /> : <Navigate to="/dashboard" />} />
+                <Route path="/register" element={!isAuthenticated() ? <Register /> : <Navigate to="/dashboard" />} />
                 <Route path="/dashboard" element={isAuthenticated() ? <Dashboard /> : <Navigate to="/login" />} />
                 <Route path="/water" element={isAuthenticated() ? <Water /> : <Navigate to="/login" />} />
                 <Route path="/calories" element={isAuthenticated() ? <Calories /> : <Navigate to="/login" />} />

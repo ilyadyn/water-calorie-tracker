@@ -12,29 +12,6 @@ function Register() {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
-    const calculateWaterNorm = (weight) => {
-        return Math.round(weight * 30);
-    };
-
-    const calculateCalorieNorm = (weight, height, age, gender, activity) => {
-        let bmr;
-        if (gender === 'male') {
-            bmr = 10 * weight + 6.25 * height - 5 * age + 5;
-        } else {
-            bmr = 10 * weight + 6.25 * height - 5 * age - 161;
-        }
-
-        const activityMultipliers = {
-            sedentary: 1.2,
-            light: 1.375,
-            moderate: 1.55,
-            active: 1.725,
-            very_active: 1.9
-        };
-
-        return Math.round(bmr * (activityMultipliers[activity] || 1.55));
-    };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
@@ -58,14 +35,20 @@ function Register() {
                 password
             });
             
-            localStorage.setItem('token', response.data.token);
-            localStorage.setItem('user', JSON.stringify(response.data.user));
-            navigate('/dashboard');
-        } catch (error) {
-            if (error.response) {
-                setError(error.response.data.error || 'Ошибка регистрации');
+            if (response.data.token) {
+                localStorage.setItem('token', response.data.token);
+                localStorage.setItem('user', JSON.stringify(response.data.user));
+                navigate('/dashboard');
             } else {
-                setError('Ошибка подключения к серверу');
+                setError('Ошибка сервера. Попробуйте еще раз.');
+            }
+        } catch (error) {
+            if (error.response?.data?.error) {
+                setError(error.response.data.error);
+            } else if (error.code === 'ERR_NETWORK') {
+                setError('Сервер недоступен. Попробуйте позже.');
+            } else {
+                setError('Ошибка регистрации. Попробуйте еще раз.');
             }
         } finally {
             setLoading(false);
