@@ -13,47 +13,47 @@ function Register() {
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        setError('');
+    e.preventDefault();
+    setError('');
+    
+    if (password !== confirmPassword) {
+        setError('Пароли не совпадают');
+        return;
+    }
+
+    if (password.length < 6) {
+        setError('Пароль должен содержать минимум 6 символов');
+        return;
+    }
+
+    setLoading(true);
+
+    try {
+        const response = await api.post('/auth/register', { 
+            username, 
+            email, 
+            password
+        });
         
-        if (password !== confirmPassword) {
-            setError('Пароли не совпадают');
-            return;
+        if (response.data.token) {
+            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('user', JSON.stringify(response.data.user));
+            window.location.href = '/dashboard';
+        } else {
+            setError('Ошибка сервера. Попробуйте еще раз.');
         }
-
-        if (password.length < 6) {
-            setError('Пароль должен содержать минимум 6 символов');
-            return;
+    } catch (error) {
+        if (error.response?.data?.error) {
+            setError(error.response.data.error);
+        } else if (error.code === 'ERR_NETWORK') {
+            setError('Сервер недоступен. Попробуйте позже.');
+        } else {
+            setError('Ошибка регистрации. Попробуйте еще раз.');
         }
-
-        setLoading(true);
-
-        try {
-            const response = await api.post('/auth/register', { 
-                username, 
-                email, 
-                password
-            });
-            
-            if (response.data.token) {
-                localStorage.setItem('token', response.data.token);
-                localStorage.setItem('user', JSON.stringify(response.data.user));
-                navigate('/dashboard');
-            } else {
-                setError('Ошибка сервера. Попробуйте еще раз.');
-            }
-        } catch (error) {
-            if (error.response?.data?.error) {
-                setError(error.response.data.error);
-            } else if (error.code === 'ERR_NETWORK') {
-                setError('Сервер недоступен. Попробуйте позже.');
-            } else {
-                setError('Ошибка регистрации. Попробуйте еще раз.');
-            }
-        } finally {
-            setLoading(false);
-        }
-    };
+    } finally {
+        setLoading(false);
+    }
+};
 
     return (
         <div className="register-container">

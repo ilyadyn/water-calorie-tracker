@@ -11,32 +11,32 @@ function Login() {
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-        setError('');
+    e.preventDefault();
+    setLoading(true);
+    setError('');
+    
+    try {
+        const response = await api.post('/auth/login', { username, password });
         
-        try {
-            const response = await api.post('/auth/login', { username, password });
-            
-            if (response.data.token) {
-                localStorage.setItem('token', response.data.token);
-                localStorage.setItem('user', JSON.stringify(response.data.user));
-                navigate('/dashboard');
-            } else {
-                setError('Ошибка сервера. Попробуйте еще раз.');
-            }
-        } catch (error) {
-            if (error.response?.data?.error) {
-                setError(error.response.data.error);
-            } else if (error.code === 'ERR_NETWORK') {
-                setError('Сервер недоступен. Попробуйте позже.');
-            } else {
-                setError('Неверное имя пользователя или пароль');
-            }
-        } finally {
-            setLoading(false);
+        if (response.data.token) {
+            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('user', JSON.stringify(response.data.user));
+            window.location.href = '/dashboard';
+        } else {
+            setError('Ошибка сервера. Попробуйте еще раз.');
         }
-    };
+    } catch (error) {
+        if (error.response?.data?.error) {
+            setError(error.response.data.error);
+        } else if (error.code === 'ERR_NETWORK') {
+            setError('Сервер недоступен. Попробуйте позже.');
+        } else {
+            setError('Неверное имя пользователя или пароль');
+        }
+    } finally {
+        setLoading(false);
+    }
+};
 
     return (
         <div className="login-container">
