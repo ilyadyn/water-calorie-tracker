@@ -1,0 +1,172 @@
+.measurements-container {
+    min-height: 100vh;
+    background-color: #f0f9f0;
+}
+
+.measurements-header {
+    background-color: #4a7c59;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.measurements-logo {
+    font-size: 24px;
+    margin: 0;
+}
+
+.measurements-logout-btn {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.measurements-nav {
+    background-color: white;
+    padding: 0 30px;
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #4a7c59;
+    overflow-x: auto;
+}
+
+.measurements-nav-btn {
+    padding: 15px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #4a7c59;
+    white-space: nowrap;
+}
+
+.measurements-nav-btn.active {
+    border-bottom: 2px solid #4a7c59;
+    font-weight: bold;
+}
+
+.measurements-main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.measurements-subtitle {
+    color: #2d5a27;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.measurements-content {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 30px;
+}
+
+.measurements-form-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+.measurements-form-section h3 {
+    color: #2d5a27;
+    margin-bottom: 20px;
+}
+
+.measurements-message {
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.measurements-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.measurements-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.measurements-input-group label {
+    color: #666;
+    font-size: 14px;
+}
+
+.measurements-input-group input {
+    padding: 12px;
+    border: 1px solid #4a7c59;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.measurements-submit-btn {
+    padding: 12px;
+    background-color: #4a7c59;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.measurements-submit-btn:hover {
+    background-color: #3d6b4f;
+}
+
+.measurements-chart-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.measurements-chart-section h3 {
+    color: #2d5a27;
+    margin-bottom: 20px;
+}
+
+.measurements-history {
+    margin-top: 30px;
+}
+
+.measurements-table {
+    margin-top: 15px;
+}
+
+.measurements-table-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    padding: 10px;
+    background-color: #f0f9f0;
+    font-weight: bold;
+    color: #2d5a27;
+    border-radius: 4px;
+}
+
+.measurements-table-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.measurements-table-row span {
+    color: #666;
+}

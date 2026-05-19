@@ -1,0 +1,108 @@
+.stats-container {
+    min-height: 100vh;
+    background-color: #f0f9f0;
+}
+
+.stats-header {
+    background-color: #4a7c59;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stats-logo {
+    font-size: 24px;
+    margin: 0;
+}
+
+.stats-logout-btn {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.stats-nav {
+    background-color: white;
+    padding: 0 30px;
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #4a7c59;
+}
+
+.stats-nav-btn {
+    padding: 15px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #4a7c59;
+}
+
+.stats-nav-btn.active {
+    border-bottom: 2px solid #4a7c59;
+    font-weight: bold;
+}
+
+.stats-main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.stats-header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.stats-subtitle {
+    color: #2d5a27;
+    font-size: 28px;
+}
+
+.stats-period-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.stats-period-btn {
+    padding: 10px 20px;
+    border: 1px solid #4a7c59;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+    color: #4a7c59;
+    border-radius: 4px;
+}
+
+.stats-period-btn.active {
+    background-color: #4a7c59;
+    color: white;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+}
+
+.stats-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.stats-card h3 {
+    color: #2d5a27;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+}

@@ -1,0 +1,293 @@
+.water-container {
+    min-height: 100vh;
+    background-color: #f0f9f0;
+}
+
+.water-header {
+    background-color: #4a7c59;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.water-logo {
+    font-size: 24px;
+    margin: 0;
+}
+
+.water-logout-btn {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.water-nav {
+    background-color: white;
+    padding: 0 30px;
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #4a7c59;
+    overflow-x: auto;
+}
+
+.water-nav-btn {
+    padding: 15px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #4a7c59;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+}
+
+.water-nav-btn.active {
+    border-bottom: 2px solid #4a7c59;
+    font-weight: bold;
+}
+
+.water-main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.water-subtitle {
+    color: #2d5a27;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.water-message {
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.water-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.water-progress-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.water-circle-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.water-circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.circle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.circle-value {
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    color: #4a90e2;
+}
+
+.circle-unit {
+    font-size: 16px;
+    color: #666;
+}
+
+.water-stats {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.water-remaining {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.water-remaining strong {
+    color: #2d5a27;
+    font-size: 20px;
+}
+
+.water-remaining small {
+    color: #999;
+    font-size: 14px;
+}
+
+.water-progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.water-progress-fill {
+    height: 100%;
+    background-color: #4a90e2;
+    transition: width 0.3s ease;
+}
+
+.water-percent {
+    color: #4a90e2;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.quick-add-section {
+    margin-top: 30px;
+}
+
+.quick-add-section h3 {
+    color: #2d5a27;
+    margin-bottom: 15px;
+}
+
+.quick-add-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.quick-add-btn {
+    padding: 10px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.quick-add-btn:hover {
+    background-color: #357abd;
+}
+
+.water-form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.water-form-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.water-form-box h3 {
+    color: #2d5a27;
+    margin-bottom: 15px;
+}
+
+.water-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.water-input {
+    padding: 12px;
+    border: 1px solid #4a7c59;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.water-submit-btn {
+    padding: 12px;
+    background-color: #4a7c59;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.water-submit-btn:hover {
+    background-color: #3d6b4f;
+}
+
+.water-history {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.water-history h3 {
+    color: #2d5a27;
+    margin-bottom: 15px;
+}
+
+.water-history-list {
+    list-style: none;
+    padding: 0;
+}
+
+.water-history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.water-history-item:last-child {
+    border-bottom: none;
+}
+
+.water-record-amount {
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+.water-record-time {
+    color: #999;
+    font-size: 14px;
+}
+
+.water-delete-btn {
+    background: none;
+    border: none;
+    color: #d32f2f;
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.water-delete-btn:hover {
+    color: #b71c1c;
+}
+
+.no-data {
+    color: #999;
+    text-align: center;
+    padding: 20px 0;
+}
