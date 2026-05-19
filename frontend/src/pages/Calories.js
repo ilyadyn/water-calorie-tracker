@@ -162,14 +162,14 @@ function Calories() {
             </header>
 
             <nav className="calories-nav">
-                <button onClick={() => navigate('/dashboard')} className="calories-nav-btn">Главная</button>
-                <button onClick={() => navigate('/water')} className="calories-nav-btn">Вода</button>
-                <button onClick={() => navigate('/calories')} className="calories-nav-btn active">Калории</button>
-                <button onClick={() => navigate('/history')} className="calories-nav-btn">История</button>
-                <button onClick={() => navigate('/stats')} className="calories-nav-btn">Статистика</button>
-                <button onClick={() => navigate('/profile')} className="calories-nav-btn">Профиль</button>
-                <button onClick={() => navigate('/measurements')} className="calories-nav-btn">Замеры</button>
-            </nav>
+    <button onClick={() => navigate('/dashboard')} className="calories-nav-btn">Главная</button>
+    <button onClick={() => navigate('/water')} className="calories-nav-btn">Вода</button>
+    <button onClick={() => navigate('/calories')} className="calories-nav-btn active">Калории</button>
+    <button onClick={() => navigate('/history')} className="calories-nav-btn">История</button>
+    <button onClick={() => navigate('/stats')} className="calories-nav-btn">Статистика</button>
+    <button onClick={() => navigate('/profile')} className="calories-nav-btn">Профиль</button>
+    <button onClick={() => navigate('/measurements')} className="calories-nav-btn">Замеры</button>
+</nav>
 
             <main className="calories-main">
                 <h2 className="calories-subtitle">Учет калорий</h2>

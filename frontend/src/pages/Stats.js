@@ -66,13 +66,14 @@ function Stats() {
             </header>
 
             <nav className="stats-nav">
-                <button onClick={() => navigate('/dashboard')} className="stats-nav-btn">Главная</button>
-                <button onClick={() => navigate('/water')} className="stats-nav-btn">Вода</button>
-                <button onClick={() => navigate('/calories')} className="stats-nav-btn">Калории</button>
-                <button onClick={() => navigate('/history')} className="stats-nav-btn">История</button>
-                <button onClick={() => navigate('/profile')} className="stats-nav-btn">Профиль</button>
-                <button onClick={() => navigate('/stats')} className="stats-nav-btn active">Статистика</button>
-            </nav>
+    <button onClick={() => navigate('/dashboard')} className="stats-nav-btn">Главная</button>
+    <button onClick={() => navigate('/water')} className="stats-nav-btn">Вода</button>
+    <button onClick={() => navigate('/calories')} className="stats-nav-btn">Калории</button>
+    <button onClick={() => navigate('/history')} className="stats-nav-btn">История</button>
+    <button onClick={() => navigate('/stats')} className="stats-nav-btn active">Статистика</button>
+    <button onClick={() => navigate('/profile')} className="stats-nav-btn">Профиль</button>
+    <button onClick={() => navigate('/measurements')} className="stats-nav-btn">Замеры</button>
+</nav>
 
             <main className="stats-main">
                 <div className="stats-header-section">

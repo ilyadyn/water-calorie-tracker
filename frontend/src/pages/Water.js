@@ -92,14 +92,14 @@ function Water() {
             </header>
 
             <nav className="water-nav">
-                <button onClick={() => navigate('/dashboard')} className="water-nav-btn">Главная</button>
-                <button onClick={() => navigate('/water')} className="water-nav-btn active">Вода</button>
-                <button onClick={() => navigate('/calories')} className="water-nav-btn">Калории</button>
-                <button onClick={() => navigate('/history')} className="water-nav-btn">История</button>
-                <button onClick={() => navigate('/stats')} className="water-nav-btn">Статистика</button>
-                <button onClick={() => navigate('/profile')} className="water-nav-btn">Профиль</button>
-                <button onClick={() => navigate('/measurements')} className="water-nav-btn">Замеры</button>
-            </nav>
+    <button onClick={() => navigate('/dashboard')} className="water-nav-btn">Главная</button>
+    <button onClick={() => navigate('/water')} className="water-nav-btn active">Вода</button>
+    <button onClick={() => navigate('/calories')} className="water-nav-btn">Калории</button>
+    <button onClick={() => navigate('/history')} className="water-nav-btn">История</button>
+    <button onClick={() => navigate('/stats')} className="water-nav-btn">Статистика</button>
+    <button onClick={() => navigate('/profile')} className="water-nav-btn">Профиль</button>
+    <button onClick={() => navigate('/measurements')} className="water-nav-btn">Замеры</button>
+</nav>
 
             <main className="water-main">
                 <h2 className="water-subtitle">Потребление воды</h2>

@@ -89,12 +89,14 @@ function Profile() {
             </header>
 
             <nav className="profile-nav">
-                <button onClick={() => navigate('/dashboard')} className="profile-nav-btn">Главная</button>
-                <button onClick={() => navigate('/water')} className="profile-nav-btn">Вода</button>
-                <button onClick={() => navigate('/calories')} className="profile-nav-btn">Калории</button>
-                <button onClick={() => navigate('/history')} className="profile-nav-btn">История</button>
-                <button onClick={() => navigate('/profile')} className="profile-nav-btn active">Профиль</button>
-            </nav>
+    <button onClick={() => navigate('/dashboard')} className="profile-nav-btn">Главная</button>
+    <button onClick={() => navigate('/water')} className="profile-nav-btn">Вода</button>
+    <button onClick={() => navigate('/calories')} className="profile-nav-btn">Калории</button>
+    <button onClick={() => navigate('/history')} className="profile-nav-btn">История</button>
+    <button onClick={() => navigate('/stats')} className="profile-nav-btn">Статистика</button>
+    <button onClick={() => navigate('/profile')} className="profile-nav-btn active">Профиль</button>
+    <button onClick={() => navigate('/measurements')} className="profile-nav-btn">Замеры</button>
+</nav>
 
             <main className="profile-main">
                 <h2 className="profile-subtitle">Настройки профиля</h2>

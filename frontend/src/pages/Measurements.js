@@ -67,14 +67,14 @@ function Measurements() {
             </header>
 
             <nav className="measurements-nav">
-                <button onClick={() => navigate('/dashboard')} className="measurements-nav-btn">Главная</button>
-                <button onClick={() => navigate('/water')} className="measurements-nav-btn">Вода</button>
-                <button onClick={() => navigate('/calories')} className="measurements-nav-btn">Калории</button>
-                <button onClick={() => navigate('/history')} className="measurements-nav-btn">История</button>
-                <button onClick={() => navigate('/profile')} className="measurements-nav-btn">Профиль</button>
-                <button onClick={() => navigate('/stats')} className="measurements-nav-btn">Статистика</button>
-                <button onClick={() => navigate('/measurements')} className="measurements-nav-btn active">Замеры</button>
-            </nav>
+    <button onClick={() => navigate('/dashboard')} className="measurements-nav-btn">Главная</button>
+    <button onClick={() => navigate('/water')} className="measurements-nav-btn">Вода</button>
+    <button onClick={() => navigate('/calories')} className="measurements-nav-btn">Калории</button>
+    <button onClick={() => navigate('/history')} className="measurements-nav-btn">История</button>
+    <button onClick={() => navigate('/stats')} className="measurements-nav-btn">Статистика</button>
+    <button onClick={() => navigate('/profile')} className="measurements-nav-btn">Профиль</button>
+    <button onClick={() => navigate('/measurements')} className="measurements-nav-btn active">Замеры</button>
+</nav>
 
             <main className="measurements-main">
                 <h2 className="measurements-subtitle">Замеры тела</h2>

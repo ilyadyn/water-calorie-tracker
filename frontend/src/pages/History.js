@@ -106,14 +106,14 @@ function History() {
             </header>
 
             <nav className="history-nav">
-                <button onClick={() => navigate('/dashboard')} className="history-nav-btn">Главная</button>
-                <button onClick={() => navigate('/water')} className="history-nav-btn">Вода</button>
-                <button onClick={() => navigate('/calories')} className="history-nav-btn">Калории</button>
-                <button onClick={() => navigate('/history')} className="history-nav-btn active">История</button>
-                <button onClick={() => navigate('/stats')} className="history-nav-btn">Статистика</button>
-                <button onClick={() => navigate('/profile')} className="history-nav-btn">Профиль</button>
-                <button onClick={() => navigate('/measurements')} className="history-nav-btn">Замеры</button>
-            </nav>
+    <button onClick={() => navigate('/dashboard')} className="history-nav-btn">Главная</button>
+    <button onClick={() => navigate('/water')} className="history-nav-btn">Вода</button>
+    <button onClick={() => navigate('/calories')} className="history-nav-btn">Калории</button>
+    <button onClick={() => navigate('/history')} className="history-nav-btn active">История</button>
+    <button onClick={() => navigate('/stats')} className="history-nav-btn">Статистика</button>
+    <button onClick={() => navigate('/profile')} className="history-nav-btn">Профиль</button>
+    <button onClick={() => navigate('/measurements')} className="history-nav-btn">Замеры</button>
+</nav>
 
             <main className="history-main">
                 <h2 className="history-subtitle">История записей</h2>
