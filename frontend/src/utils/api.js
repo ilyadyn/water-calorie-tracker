@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://water-calorie-tracker.onrender.com'
+    baseURL: 'https://water-calorie-tracker.onrender.com/api'
 });
 
 api.interceptors.request.use((config) => {
